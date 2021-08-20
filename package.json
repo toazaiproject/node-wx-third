@@ -1,0 +1,19 @@
+{
+  "name": "node-wx-third",
+  "version": "1.0.8",
+  "description": "微信第三方平台对接，实现小程序批量发布/一键发布",
+  "main": "index.js",
+  "directories": {
+    "lib": "lib",
+    "test": "test"
+  },
+  "dependencies": {
+    "request": "^2.88.2"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "bluedtao",
+  "license": "ISC"
+}
