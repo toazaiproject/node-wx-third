@@ -125,4 +125,4 @@ let draft_id = '1';
 // wechatEncrypt.setWeAppSupportVersion(authorizer_access_token,{version:'1.0.0'});
 // wechatEncrypt.memberAuth(authorizer_access_token);
 // wechatEncrypt.bindTester(authorizer_access_token,{wechatid:'ahao100861'});
-// wechatEncrypt.unBindTester(authorizer_access_token,{wechatid:'ahao100861'});
+// wechatEncrypt.unbindTester(authorizer_access_token,{wechatid:'ahao100861'});

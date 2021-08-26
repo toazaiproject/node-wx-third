@@ -545,7 +545,7 @@ wechatEncrypt.bindTester(authorizer_access_token,{wechatid:'ahao100861'})
  * @param {String} params [其他参数]
  * @param {String} params.wechatid [微信号]
 */
-wechatEncrypt.unbindTesterUrl(authorizer_access_token,{wechatid:'ahao100861'})
+wechatEncrypt.unbindTester(authorizer_access_token,{wechatid:'ahao100861'})
 .then(function (body){
 	console.log(body);
 })
