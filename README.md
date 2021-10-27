@@ -554,3 +554,44 @@ wechatEncrypt.unbindTester(authorizer_access_token,{wechatid:'ahao100861'})
 });
 ```
 
+### 设置服务器域名
+
+```
+/**
+ * 
+ * @param {String} access_token [第三方平台接口调用令牌authorizer_access_token]
+ * @param {String} params [其他参数]
+ * @param {String} params.action [操作类型,set覆盖,get获取]
+ * @param {String} params.requestdomain [request 合法域名；当 action 是 get 时不需要此字段]
+ * @param {String} params.wsrequestdomain [socket 合法域名；当 action 是 get 时不需要此字段]
+ * @param {String} params.uploaddomain [uploadFile 合法域名；当 action 是 get 时不需要此字段]
+ * @param {String} params.downloaddomain [downloadFile 合法域名；当 action 是 get 时不需要此字段]
+*/
+wechatEncrypt.modifyDomain(authorizer_access_token,{action:'set',requestdomain:[],wsrequestdomain:[],uploaddomain:[],downloaddomain:[]})
+.then(function (body){
+	console.log(body);
+})
+.catch(function (err){
+	console.log(err);
+});
+```
+
+### 设置业务域名
+
+```
+/**
+ * 
+ * @param {String} access_token [第三方平台接口调用令牌authorizer_access_token]
+ * @param {String} params [其他参数]
+ * @param {String} params.action [操作类型,set覆盖,get获取]
+ * @param {String} params.webviewdomain [小程序业务域名，当 action 参数是 get 时不需要此字段]
+*/
+wechatEncrypt.setWebViewDomain(authorizer_access_token,{action:'set',webviewdomain:[]})
+.then(function (body){
+	console.log(body);
+})
+.catch(function (err){
+	console.log(err);
+});
+```
+
