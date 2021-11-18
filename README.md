@@ -595,3 +595,29 @@ wechatEncrypt.setWebViewDomain(authorizer_access_token,{action:'set',webviewdoma
 });
 ```
 
+### 设置隐私保护协议
+
+```
+/**
+ * 
+ * @param {String} access_token [第三方平台接口调用令牌authorizer_access_token]
+ * @param {String} params [其他参数]
+ * @param {Object} params.owner_setting [收集方（开发者）信息配置]
+ * @param {String} params.owner_setting.contact_email [信息收集方（开发者）的邮箱地址，4种联系方式至少要填一种]
+ * @param {String} params.owner_setting.contact_phone [信息收集方（开发者）的手机号，4种联系方式至少要填一种]
+ * @param {String} params.owner_setting.contact_qq [信息收集方（开发者）的qq号，4种联系方式至少要填一种]
+ * @param {String} params.owner_setting.contact_weixin [信息收集方（开发者）的微信号，4种联系方式至少要填一种]
+ * @param {String} params.owner_setting.notice_method [通知方式，指的是当开发者收集信息有变动时，通过该方式通知用户。这里服务商需要按照实际情况填写，例如通过弹窗或者公告或者其他方式。]
+ * @param {Array} params.setting_list [要收集的用户信息配置，可选择的用户信息类型参考下方详情]
+ * @param {String} params.setting_list.privacy_key [官方的可选值参考下方说明；该字段也支持自定义]
+ * @param {String} params.setting_list.privacy_text [是	请填写收集该信息的用途。例如privacy_key=Location（位置信息），那么privacy_text则填写收集位置信息的用途。无需再带上“为了”或者“用于”这些字眼，小程序端的显示格式是为了xxx，因此开发者只需要直接填写用途即可。]
+*/
+wechatEncrypt.setPrivacySetting(authorizer_access_token,{owner_setting:{contact_email:'xx@xx.com',notice_method:'contact_email'},setting_list:[{privacy_key:'UserInfo',privacy_text:'基础信息展示'}]})
+.then(function (body){
+	console.log(body);
+})
+.catch(function (err){
+	console.log(err);
+});
+```
+
